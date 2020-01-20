@@ -1,0 +1,8 @@
+PUT https://reqres.in/api/users/2
+
+{
+    "name": "morpheus",
+    "job": "zion resident"
+}
+
+###
