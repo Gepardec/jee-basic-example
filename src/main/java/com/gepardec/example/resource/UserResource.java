@@ -1,13 +1,10 @@
-package com.gepardec.example.resouce;
+package com.gepardec.example.resource;
 
 import com.gepardec.example.service.api.UserService;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
@@ -19,10 +16,17 @@ public class UserResource {
     UserService userService;
 
     @GET
-    @Path("/name")
+    @Path("/test")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response test() {
+        return Response.ok().build();
+    }
+
+    @GET
+    @Path("/name/{userId}")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response getFullName(Integer userId) {
+    public Response getFullName(@PathParam("userId") Integer userId) {
         return Response.ok(userService.getFullUserNameById(userId)).build();
     }
 }

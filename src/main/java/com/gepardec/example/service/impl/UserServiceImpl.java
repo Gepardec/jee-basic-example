@@ -12,7 +12,7 @@ import javax.ws.rs.core.MediaType;
 @RequestScoped
 public class UserServiceImpl implements UserService {
 
-    private static final String URL_GET_USER = "reqres.in/api/users";
+    private static final String URL_GET_USER = "https://reqres.in/api/users";
 
     private Client client;
 
