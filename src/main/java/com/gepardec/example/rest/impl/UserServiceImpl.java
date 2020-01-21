@@ -1,10 +1,12 @@
-package com.gepardec.example.service.impl;
+package com.gepardec.example.rest.impl;
 
 import com.gepardec.example.model.User;
-import com.gepardec.example.service.api.UserService;
+import com.gepardec.example.rest.api.UserService;
+import com.gepardec.example.util.UserTransformer;
 
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.RequestScoped;
+import javax.json.JsonObject;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.core.MediaType;
@@ -33,7 +35,9 @@ public class UserServiceImpl implements UserService {
             return null;
         }
 
-        return client.target(URL_GET_USER).path(id.toString()).request(MediaType.APPLICATION_JSON).get(User.class);
+        JsonObject response = client.target(URL_GET_USER).path(id.toString()).request(MediaType.APPLICATION_JSON).get(JsonObject.class);
+
+        return UserTransformer.transformUser(response);
     }
 
     @Override

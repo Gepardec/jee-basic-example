@@ -2,8 +2,8 @@ package com.gepardec.example;
 
 import static org.junit.Assert.*;
 import com.gepardec.example.model.User;
-import com.gepardec.example.service.api.UserService;
-import com.gepardec.example.service.impl.UserServiceImpl;
+import com.gepardec.example.rest.api.UserService;
+import com.gepardec.example.rest.impl.UserServiceImpl;
 import org.junit.Before;
 import org.junit.Test;
 

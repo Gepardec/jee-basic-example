@@ -1,4 +1,4 @@
-package com.gepardec.example.service.api;
+package com.gepardec.example.rest.api;
 
 import com.gepardec.example.model.User;
 

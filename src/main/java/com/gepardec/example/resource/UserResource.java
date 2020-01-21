@@ -1,6 +1,6 @@
 package com.gepardec.example.resource;
 
-import com.gepardec.example.service.api.UserService;
+import com.gepardec.example.rest.api.UserService;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
