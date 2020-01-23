@@ -3,7 +3,6 @@
              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/application_7.xsd"
              version="7">
 
-    <module id="example-EJB"/>
     <module id="example-EJB">
         <ejb>ejb.jar</ejb>
     </module>

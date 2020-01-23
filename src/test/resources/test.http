@@ -1,0 +1,11 @@
+GET https://reqres.in/api/users/
+
+###
+
+POST https://reqres.in/api/users/2
+
+{"name":"jane"}
+
+
+
+###
